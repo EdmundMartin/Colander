@@ -36,6 +36,7 @@ func NewNode(key int, val interface{}) *Node {
 }
 
 type BST struct {
+	Name string
 	Root  *Node
 	Items int
 }
@@ -45,8 +46,8 @@ type Result struct {
 	Value interface{}
 }
 
-func NewBST() *BST {
-	return &BST{}
+func NewBST(name string) *BST {
+	return &BST{Name: name}
 }
 
 func LoadFromFile(filename string) (*BST, error) {
